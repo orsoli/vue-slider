@@ -17,9 +17,19 @@ img{
 
 .thumbs img{
     height: 100px;
+    opacity: 0.7;
+    cursor: pointer;
 }
+.thumbs img:hover{
+    opacity: 1;
+}
+
 
 /* Chevrons  */
 .chevrons{
     translate: 50% 0;
+}
+
+.bi{
+    cursor: pointer;
 }

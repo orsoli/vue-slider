@@ -41,10 +41,10 @@
             </div>
         </div>
         <!-- Thumbs section  -->
-        <div class="thumbs col-3 opacity-75 position-relative">
+        <div class="thumbs col-3 position-relative">
             <div class="row row-cols-1 h-100">
                 <div class="col h-100">
-                    <img v-for="(img,i) in media" :src="media[i].image" alt="">
+                    <img v-for="(img,i) in media" :src="media[i].image" alt="media[i].title" @click="setActiveIndex(i)">
                 </div>
             </div>
             <!-- Buttons   -->

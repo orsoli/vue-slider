@@ -41,11 +41,27 @@ const app = createApp({
     };
   },
 
-  // Inside methods component create a function to set the activeIndex in click
+  computed: {
+    // Create a function for the last activeIndex
+    lastActiveIndex() {
+      return this.media.length - 1;
+    },
+  },
+
   methods: {
-    setActiveIndex(set) {
-      if (set === "prev") this.activeIndex--; // Condition if click in chevron up
-      if (set === "next") this.activeIndex++; // Condition if click in chevron down
+    // Create a function to set the activeIndex in click
+    setActiveIndex(direction) {
+      if (direction === "prev") {
+        // Ternary condition if click in chevron up is the firs img, if not decrement
+        this.activeIndex === 0
+          ? (this.activeIndex = this.lastActiveIndex)
+          : this.activeIndex--;
+      } else if (direction === "next") {
+        // Ternary condition if click in chevron down is the last img, and increment
+        this.activeIndex === this.lastActiveIndex
+          ? (this.activeIndex = 0)
+          : this.activeIndex++;
+      } else this.activeIndex = direction; // If click in thumbnails this activeIndex = i
     },
   },
 }).mount("#app");
