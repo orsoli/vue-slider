@@ -29,7 +29,7 @@
     <!-- Container  -->
     <div class="container d-flex align-items-stretch mx-auto py-4" id="app">
         <!-- Carousel section  -->
-        <div id="carousel" class="carousel slide col-9">
+        <div id="carousel" class="carousel slide col-9" @mouseover="slidePause" @mouseleave="slideAutoPlay">
             <div class="row h-100">
                 <div class="col h-100">
                     <img :src="media[activeIndex].image" :alt="media[activeIndex].title">

@@ -27,3 +27,12 @@
 
 //--- Bonus 1
 // Create a function to do index === activeIndex
+
+//--- Bonus 2
+// Use a component method  to create a setInterval function increaseing the acctiveIndex every 3sec
+// Create a variable on data() method with initial value null
+// Create funtions to return setInterval() and clearInterval()
+// Create a mounted() method to call setInterval
+
+//--- Bonus 3
+// On DOM elements add directives v-on: mouseover and moeseleave
