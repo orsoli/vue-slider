@@ -27,12 +27,13 @@
 
 <body>
     <!-- Container  -->
-    <div class="container d-flex align-items-stretch mx-auto py-4" id="app">
+    <div class="container d-flex align-items-stretch mx-auto py-4 " id="app">
         <!-- Carousel section  -->
-        <div id="carousel" class="carousel slide col-9" @mouseover="slidePause" @mouseleave="slideAutoPlay">
+        <div id="carousel" class="carousel slide col-9 rounded-4 shadow" @mouseover="slidePause"
+            @mouseleave="slideAutoPlay">
             <div class="row h-100">
                 <div class="col h-100">
-                    <img :src="media[activeIndex].image" :alt="media[activeIndex].title">
+                    <img :src="media[activeIndex].image" :alt="media[activeIndex].title" class="rounded-start-4">
                     <div class="carousel-caption text-end">
                         <h5>{{media[activeIndex].title}}</h5>
                         <p> {{media[activeIndex].text}} </p>
@@ -43,7 +44,7 @@
         <!-- Thumbs section  -->
         <div class="thumbs col-3 position-relative">
             <div class="row row-cols-1 h-100">
-                <div class="col h-100">
+                <div class="col h-100 ">
                     <img v-for="(img,i) in media" :src="media[i].image" alt="media[i].title" @click="setActiveIndex(i)">
                 </div>
             </div>
