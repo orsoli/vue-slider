@@ -40,4 +40,12 @@ const app = createApp({
       activeIndex: 0, // activeIndex initial value
     };
   },
+
+  // Inside methods component create a function to set the activeIndex in click
+  methods: {
+    setActiveIndex(set) {
+      if (set === "prev") this.activeIndex--; // Condition if click in chevron up
+      if (set === "next") this.activeIndex++; // Condition if click in chevron down
+    },
+  },
 }).mount("#app");
